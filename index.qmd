@@ -6,6 +6,7 @@ date: today
 format:
   html:
     theme: cosmo
+    self-contained: true
     css: styles.css
     toc: true
     toc-location: right
