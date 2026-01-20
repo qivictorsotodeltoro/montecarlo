@@ -1,0 +1,273 @@
+/* =========================================================
+   RESET LIGERO – documento técnico (no sitio web)
+   ========================================================= */
+
+body {
+  background-color: #ffffff;
+  color: #222222;
+  line-height: 1.6;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* =========================================================
+   VARIABLES DE COLOR INSTITUCIONAL
+   ========================================================= */
+
+:root {
+  --verde-analitica: #265129;
+  --verde-analitica-dark: #1d3f21;
+}
+
+/* =========================================================
+   TÍTULOS
+   ========================================================= */
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--verde-analitica);
+  font-weight: 600;
+}
+
+h1 {
+  margin-top: 2.8rem;
+  padding-bottom: 0.3em;
+  border-bottom: 2px solid #e5e0c8;
+}
+
+h2 {
+  margin-top: 2.4rem;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+/* =========================================================
+   CONTENIDO – ancho cómodo y centrado
+   ========================================================= */
+
+main.content {
+  max-width: 1800px;   /* ← más ancho */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+
+
+/* =========================================================
+   TEXTO Y ÉNFASIS
+   ========================================================= */
+
+strong {
+  color: var(--verde-analitica);
+}
+
+em {
+  color: var(--verde-analitica-dark);
+}
+
+/* =========================================================
+   ENLACES (cuerpo del documento)
+   ========================================================= */
+
+a {
+  color: var(--verde-analitica);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--verde-analitica-dark);
+  text-decoration: underline;
+}
+
+/* =========================================================
+   LISTAS
+   ========================================================= */
+
+ul li::marker,
+ol li::marker {
+  color: var(--verde-analitica);
+}
+
+/* =========================================================
+   BLOCKQUOTES – normativos
+   ========================================================= */
+
+blockquote {
+  border-left: 4px solid var(--verde-analitica);
+  padding-left: 1rem;
+  color: #333333;
+  font-style: italic;
+}
+
+/* =========================================================
+   TABLAS – limpias
+   ========================================================= */
+
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border-bottom: 1px solid #dddddd;
+  padding: 0.4rem 0.6rem;
+}
+
+th {
+  font-weight: 600;
+}
+
+/* =========================================================
+   FIGURAS Y ECUACIONES
+   ========================================================= */
+
+figure {
+  margin: 2rem auto;
+}
+
+.math {
+  font-size: 1.05rem;
+}
+
+/* =========================================================
+   FOOTNOTES
+   ========================================================= */
+
+.footnotes {
+  font-size: 0.9rem;
+  color: #555555;
+}
+
+/* =========================================================
+   ELIMINAR ELEMENTOS DE WEBSITE
+   ========================================================= */
+
+.navbar,
+.breadcrumb {
+  display: none !important;
+}
+
+
+/* =========================================================
+   TOC (derecha) – transparente y técnico
+   ========================================================= */
+
+/* Contenedor sticky */
+.quarto-toc-container {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Caja del TOC */
+.quarto-toc {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding-left: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Lista */
+.quarto-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Enlaces */
+.quarto-toc a {
+  color: var(--verde-analitica);
+  text-decoration: none;
+}
+
+/* Hover */
+.quarto-toc a:hover {
+  color: var(--verde-analitica-dark);
+  text-decoration: underline;
+}
+
+/* Sección activa (IMPORTANTE: toc-active) */
+.quarto-toc .toc-active > a {
+  color: var(--verde-analitica-dark);
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   FORZAR VISIBILIDAD Y POSICIÓN DEL TOC DERECHO
+   ========================================================= */
+
+/* Contenedor externo del TOC */
+.quarto-toc-container {
+  display: block !important;
+  visibility: visible !important;
+  position: fixed;
+  top: 6rem;
+  right: 1.5rem;
+  width: 260px;
+  max-height: calc(100vh - 8rem);
+  overflow-y: auto;
+}
+
+/* Evitar que tape el contenido */
+main.content {
+  margin-right: 300px;
+}
+
+
+/* =========================================================
+   LOGO FIJO – firma discreta de documento
+   ========================================================= */
+
+.fixed-logo {
+  position: fixed;
+  top: 1.2rem;
+  left: 1.2rem;
+  width: 110px;
+  z-index: 1000;
+  opacity: 0.85;
+}
+
+.fixed-logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* ================================
+   TABLAS DT – estilo técnico
+   ================================ */
+
+table.dataTable {
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+/* Encabezados */
+table.dataTable thead th {
+  background-color: #ffffff;
+  color: #265129;
+  font-weight: 600;
+  border-bottom: 2px solid #265129;
+}
+
+/* Celdas */
+table.dataTable tbody td {
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+/* Hover discreto */
+table.dataTable tbody tr:hover {
+  background-color: #f6f8f6;
+}
+
+/* Quitar bordes laterales */
+table.dataTable.no-footer {
+  border-bottom: none;
+}
+
+
